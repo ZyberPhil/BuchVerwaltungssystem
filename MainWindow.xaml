@@ -7,18 +7,22 @@
         mc:Ignorable="d"
         Title="BuchVerwaltungssystem" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="183*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox x:Name="tbTitle" TextWrapping="Wrap" Text="" Width="120" Margin="10,23,670,392" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="Title:" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbAutor" TextWrapping="Wrap" Text="" Width="120" Margin="67,23,545,392" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="67,0,0,0" TextWrapping="Wrap" Text="Autor:" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="tbIsbn" TextWrapping="Wrap" Text="" Width="120" Margin="192,23,420,392" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="192,0,0,0" TextWrapping="Wrap" Text="ISBN" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="tbErscheinungsjahr" TextWrapping="Wrap" Text="" Width="120" Margin="317,23,295,392" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="317,0,0,0" TextWrapping="Wrap" Text="Erscheinungsjahr" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Titel:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBox x:Name="tbTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,10,0,0" Width="200"/>
 
+        <Label Content="Autor:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox x:Name="tbAutor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,50,0,0" Width="200"/>
+
+        <Label Content="ISBN:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0"/>
+        <TextBox x:Name="tbISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,90,0,0" Width="200"/>
+
+        <Label Content="Erscheinungsjahr:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
+        <TextBox x:Name="tbErscheinungsjahr" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,130,0,0" Width="200" TextChanged="tbErscheinungsjahr_TextChanged"/>
+
+        <Button x:Name="bAdd" Content="Hinzufügen" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,180,0,0" Width="75" Click="Hinzufügen_Click"/>
+        <Button x:Name="bDel" Content="Entfernen" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,180,0,0" Width="75" Click="Entfernen_Click"/>
+        <Button x:Name="bShow" Content="Anzeigen" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,180,0,0" Width="75" Click="Anzeigen_Click"/>
+
+        <ListBox Name="lbBuecher" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,220,0,0" Width="760" Height="200" SelectionChanged="lbBuecher_SelectionChanged"/>
     </Grid>
 </Window>

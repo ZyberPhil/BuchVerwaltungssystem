@@ -9,34 +9,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BuckVerwaltungssystem;
 
 public class Buch
 {
     public string Title { get; set; }
     public string Autor { get; set; }
     public string ISBN { get; set; }
-    public DateTime Erscheinnungsjahr { get; set; }
+    public int Erscheinungsjahr { get; set; }
 
-    public Buch(string title, string autor, string isbn, DateTime erscheinnungsjahr)
+    public Buch(string title, string autor, string isbn, int erscheinungsjahr)
     {
         Title = title;
         Autor = autor;
         ISBN = isbn;
-        Erscheinnungsjahr = erscheinnungsjahr;
+        Erscheinungsjahr = erscheinungsjahr;
     }
 
-    public void Hinzufügen(string title, string autor, string isbn, DateTime erscheinnungsjahr)
+    public void Hinzufügen(string title, string autor, string isbn, int erscheinungsjahr)
     {
 
     }
 
-    public void Entfernen(string title, string autor, string isbn, DateTime erscheinnungsjahr)
+    public void Entfernen(string title, string autor, string isbn, int erscheinungsjahr)
     {
 
     }
 
-    public void Anzeigen(string title, string autor, string isbn, DateTime erscheinnungsjahr)
+    public string AnzeigenVonInformationen(string title, string autor, string isbn, int erscheinungsjahr)
     {
-
+        return $"Titel: {title}, Autor: {autor}, ISBN: {isbn}, Erscheinungsjahr: {erscheinungsjahr}";
     }
 }
